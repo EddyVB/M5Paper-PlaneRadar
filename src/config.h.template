@@ -1,0 +1,31 @@
+// Optional: copy this file to src/config.h and fill in your values. They are
+// first-boot defaults; settings saved from the device's settings page win.
+// src/config.h is gitignored so your WiFi password stays local.
+#pragma once
+
+#define WIFI_SSID     "your-ssid"
+#define WIFI_PASSWORD "your-password"
+
+// Radar centre (decimal degrees)
+#define RADAR_LAT 48.4284
+#define RADAR_LON -123.3656
+
+// Initial range preset: 0=5, 1=10, 2=15, 3=25 (miles, or km when metric);
+// metric also has 4=40 km and 5=50 km
+#define RADAR_RANGE_INDEX 3
+
+// ADS-B poll interval in seconds (e-ink: 10-15 s is a good balance)
+#define RADAR_FETCH_INTERVAL_SEC 12
+
+// Uncomment for km, km/h and metres instead of miles, mph and feet
+// #define RADAR_UNITS_METRIC
+
+// POSIX timezone for the "updated HH:MM" label (default: Central European Time)
+// #define RADAR_TZ "CET-1CEST,M3.5.0,M10.5.0/3"
+
+// Battery mode: update every N seconds and power off in between.
+// Toggle on the device: hold the side wheel (live -> battery), or hold the wheel
+// while restarting (battery -> live). RADAR_BATTERY_MODE only sets the mode
+// for the very first boot; after that the saved choice is used.
+#define RADAR_BATTERY_INTERVAL_SEC 300
+// #define RADAR_BATTERY_MODE 1
