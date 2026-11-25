@@ -8,6 +8,8 @@ was inspired by [ESP32-Plane-Radar](https://github.com/MatixYo/ESP32-Plane-Radar
 - ADS-B data: [adsb.fi opendata API](https://opendata.adsb.fi/), no API key needed
 - Routes: [adsbdb.com](https://api.adsbdb.com/)
 
+<a href="Images/PlaneRadar.jpg"><img src="Images/PlaneRadar.jpg" alt="PlaneRadar running on the M5Paper" width="600"></a>
+
 ## Using it
 - **Tap empty radar** (or press the side wheel) to cycle the range: 5 / 10 / 15 / 25 mi, or 5 / 10 / 15 / 25 / 40 / 50 km with metric units.
   The choice is saved.
@@ -36,6 +38,11 @@ a few hours on battery; use USB power for it.
    coordinates. These are only first-boot defaults; settings saved on the device win.
    Without `config.h` the radar starts in setup mode.
 3. Run `pio run -t upload`, then `pio device monitor`.
+
+## Note
+This project was used to learn more about how to automate Claude Code
+generating code, compiling, debugging, uploading the code to the target, and
+testing it.
 
 ## License
 AGPL-3.0, matching info-orbs, since parts of this project are derived from its code. See `LICENSE`.
